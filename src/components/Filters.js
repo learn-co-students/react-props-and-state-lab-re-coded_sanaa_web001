@@ -23,3 +23,9 @@ class Filters extends React.Component {
 }
 
 export default Filters
+
+// <Filters />
+//     Animal type
+//       4) should call the `onChangeType` prop callback when the animal type select changes
+//     Finding pets
+//       5) should call the `onFindPetsClick` callback prop when the "Find pets" button is clicked

@@ -27,3 +27,20 @@ class Pet extends React.Component {
 }
 
 export default Pet
+
+// Pet />
+//     Rendering props
+//       6) should render the name
+//       7) should render the correct gender icon for male pets
+//       8) should render the correct gender icon for female pets
+//       9) should render the pet type
+//       10) should render the pet age
+//       11) should render the pet weight
+//     Adopting a pet
+//       Pet is not adopted yet
+//         12) should only show the adopt button
+//         13) should call the `onAdoptPet` callback prop when the adopt button is clicked
+//         14) should call the `onAdoptPet` callback prop with the pet ID
+//       Pet is already adopted
+//         15) should only show the already adopted button
+//         ✓ should not call the `onAdoptPet` callback prop when the button is clicked
