@@ -23,7 +23,7 @@ class App extends React.Component {
   }
   onFindPetsClick =()=>{
     let url='/api/pets'
-    if(this.state.filters.type !='all'){
+    if(this.state.filters.type !=='all'){
       url += `?type=${this.state.filters.type}`;
     }
     fetch(url)
@@ -31,15 +31,16 @@ class App extends React.Component {
     .then(pets =>this.setState({pets})) //same as {pets:pets}
     
   }
-  onAdoptPet =(petId)=>{
-    const pets =pets.map(p =>{
-      if( p.id ===petId){
-        return {...p, isAdopted:true}
+  onAdoptPet = petId => {
+    const pets = this.state.pets.map(p => {
+      if(p.id === petId) {
+        return { ...p, isAdopted: true }
+      }else {
+        return p
       }
-      else return p
-    })
-    this.setState ({pets})
-  }
+    });
+    this.setState({ pets });
+  };
 
   render() {
     return (
